@@ -1,15 +1,8 @@
 #!/bin/bash
+ 
 
-if ! command -v wget &> /dev/null; then
-    echo "wget no está instalado. Instalando"
-    sudo apt-get update ; sudo apt-get install -y wget
-else 
-echo "El comando estaba instalado"
-fi
+URL="https://www.periodismo.com/2024/01/22/nuevo-record-guinness-un-hombre-tomo-una-taza-de-cafe-en-3-segundos/"
 
 
-dire="https://www.periodismo.com/2024/01/02/la-micronacion-estadounidense-donde-puedes-ir-preso-por-posesion-de-cebollas-o-espinacas/"
+wget -O archivo.html $URL 
 
-wget "$dire"  -O archivo.html
-
-titular=$
